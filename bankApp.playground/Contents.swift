@@ -54,10 +54,12 @@ class Account {
 //Inheritance
 
 class SavingsAccount: Account {
+    // polymorphism
     override var interest: Double{
         get {return 0.1}
         set{}
     }
+    // polymorphism
     override func deposit(amount: Int) -> String {
         self.bonus()
         return amount <= 0 ? "deposit must be more than Zero": "Your new acc balance is\(self.accountBalance += (amount * 100))"
@@ -67,11 +69,12 @@ class SavingsAccount: Account {
 // current account
 //Inheritance
 class CurrentAccount: Account{
+    // polymorphism
     override var interest: Double{
         get{return 0.05}
         set {}
     }
-    
+    // polymorphism
     override func withdrawal(amount: Int) -> Int {
         let amountIncludingChargesKobo = (amount + 100) * 100
         if amount <= 0 {
@@ -174,7 +177,11 @@ firstCustomer.withdraw(customerAcc: firstCustomer.accounts?[1] ?? <#default valu
 
 
 
-
+//                  DEFINITIONS!
+//ABSTRACTION;Abstraction of Data or Hiding of Information is called Abstraction! or in other words, what are those things that a user is concerned about.
+//ENCAPSULATION;Binding of Data and Functions (that manipulate the data) together and keep both safe from outside interference and misuse is called Encapsulation.
+//INHERITANCE;Inheritance enables new objects to take on the properties of existing objects. There are different ways in which Inheritance can be done.
+//POLYMORPHISM;It is the ability to redefine methods for derived classes. or we can say that object can behave in different forms is call Polymorphism.
 
 
 
